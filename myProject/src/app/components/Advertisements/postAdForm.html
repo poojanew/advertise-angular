@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12" style="min-height: 500px;">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h4>Submit Ad</h4></div>
+                <div class="panel-body">
+                    <form class="form-horizontal" [formGroup]="productForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label class="control-label col-xs-2">Ad-Title</label>
+                            <div class="col-xs-8">
+                                <input type="text" #title formControlName="adTitle" class="form-control" placeholder="Title">
+                                <div [hidden]="productForm.controls.adTitle.pristine" *ngIf="productForm.controls['adTitle'].hasError('required')" class="alert alert-danger">Please Enter Product Name</div>
+                                <div *ngIf="productForm.controls['adTitle'].hasError('minlength')" class="alert alert-danger">Minimum 7 letters</div>
+                                <div *ngIf="productForm.controls['adTitle'].hasError('maxlength')" class="alert alert-danger">Exceeding maximum length limit(20 characters)</div>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-2">Name</label>
+                            <div class="col-xs-6">
+                                <input type="text" #name formControlName="userName" class="form-control" placeholder="Enter Your Name">
+                                <div [hidden]="productForm.controls.userName.pristine" *ngIf="productForm.controls['userName'].hasError('required')" class="alert alert-danger">Please Enter Your Name</div>
+                                <div *ngIf="productForm.controls['userName'].hasError('minlength')" class="alert alert-danger">Minimum 3 letters</div>
+                                <div *ngIf="productForm.controls['userName'].hasError('maxlength')" class="alert alert-danger">Exceeding maximum length limit(20 characters)</div>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-2">Ad-Cetegory</label>
+                            <div class="col-xs-8">
+                                <div class="input-group">
+                                    <select #category class="form-control">
+                                        <option *ngFor="let option of options" [value]="option.value">{{option.name}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-2">Ad-Description</label>
+                            <div class="col-xs-8">
+                                <input type="text" #description formControlName="adDescription" style="min-height: 100px" class="form-control"  placeholder="Write precise description about product">
+                                <div *ngIf="productForm.controls['adDescription'].hasError('maxlength')" class="alert alert-danger">Maximum 70 characters</div>
+
+                            </div>
+                        </div>
+                                            
+                        <hr>
+                        <div class="form-group">
+                            <div class="col-xs-offset-2 col-xs-10">
+                                <a href="#postad" class="btn btn-lg btn-primary" data-toggle="modal">Submit</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,179 @@
+.row > div{
+        margin-bottom: 15px;
+    }
+    .header{
+        min-height: 50px;
+    }
+    .footer{
+        min-height: 30px;
+    }
+    .header, .footer{
+        background: #2f2f2f;
+    }
+    .sidebar{
+        background: #dbdfe5;
+    }
+    .intro{
+        background: #7e8aa0;
+        min-height: 250px;
+    }
+    .section{
+        min-height: 150px;
+        background: #dbdfe5;
+    }
+    .section.bg-alt{
+        background: #b4bac0;
+    }
+
+    .panel-body{
+        padding: 5px;
+    }
+
+
+    .carousel{
+        background: #2f4357;
+        margin-top: 20px;
+    }
+    .carousel .item{
+        min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+    }
+    
+    .carousel .item img{
+        margin: 0 auto; /* Align slide image horizontally center */
+    }
+
+    .img-wrapper {
+        position: relative;
+    }
+
+    .img-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .img-overlay:before {
+        content: ' ';
+        display: block;
+        height: 50%;
+    }
+
+   
+
+#uldiv2 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f8f8f8;
+}
+
+.lidiv2 {
+    float: left;
+}
+
+.lidiv2 a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.lidiv2 a:hover {
+    background-color: white;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    width: 220px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+
+}
+
+div.gallery img:hover{
+  border: 1px solid red;
+
+}
+
+div.desc {
+    padding: 5px;
+    text-align: center;
+
+}
+
+-----------------------------------------------------
+
+
+.uldiv3 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f8f8f8;
+}
+
+.lidiv3 {
+    float: left;
+}
+
+.lidiv3 a, .dropbtn1 {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.lidiv3 a:hover, .dropdown1:hover .dropbtn1 {
+    background-color: white;
+}
+
+.lidiv3.dropdown1 {
+    display: inline-block;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content1 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content1 a:hover {background-color: white}
+
+.dropdown1:hover .dropdown-content1 {
+    display: block;
+}
+
+/*Hovering over subcategories */
+.tdhover:hover{
+    border: 2px solid  #dbdfe5;
+
+    }
